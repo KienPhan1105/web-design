@@ -1,0 +1,202 @@
+<!-- FILE index.php -->
+
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">KIÊN Bán Xe Ô Tô Điện</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex" id="non-authenticated">
+          <a href="register.html" class="btn btn-outline-success me-2">Sign in</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModalToggle">Login</button>
+        </div>
+        <div class="d-flex d-none" id="authenticated">
+          <button class="btn btn-outline-success me-2" id="authenticated-username"></button>
+          <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="container-fluid p-0">
+    <img src="image/bannerImage.png" alt="Banner" class="img-fluid w-100">
+  </div>
+
+
+  <!-- Product Cards -->
+  <div class="container mt-3">
+    <div class="row" id="divListCar">
+      <!-- Card 1 -->
+      <div class="col-sm-6 mb-3">
+        <div class="card p-2">
+          <div class="row g-0 align-items-center">
+            <div class="col-sm-4">
+              <img src="image/vf1.jpg" class="img-thumbnail" style="width: 120px;" alt="VinFast VF1">
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Vinfast1 (VF1)</h5>
+              <p class="card-text">Xe đẹp, ngoại hình ngon</p>
+              <ul>
+                <li>Pin: chưa công bố</li>
+                <li>Quãng đường: chưa công bố</li>
+                <li>Giá: 100 triệu</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-sm-6 mb-3">
+        <div class="card p-2">
+          <div class="row g-0 align-items-center">
+            <div class="col-sm-4">
+              <img src="image/vf2.jpg" class="img-thumbnail" style="width: 120px;" alt="VinFast VF2">
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Vinfast2 (VF2)</h5>
+              <p class="card-text">Xe đẹp, ngoại hình ngon</p>
+              <ul>
+                <li>Pin: chưa công bố</li>
+                <li>Quãng đường: chưa công bố</li>
+                <li>Giá: 125 triệu</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-sm-6 mb-3">
+        <div class="card p-2">
+          <div class="row g-0 align-items-center">
+            <div class="col-sm-4">
+              <img src="image/vf3.jpg" class="img-thumbnail" style="width: 120px;" alt="VinFast VF3">
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Vinfast3 (VF3)</h5>
+              <p class="card-text">Xe đẹp, ngoại hình ngon</p>
+              <ul>
+                <li>Pin: chưa công bố</li>
+                <li>Quãng đường: chưa công bố</li>
+                <li>Giá: 150 triệu</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-sm-6 mb-3">
+        <div class="card p-2">
+          <div class="row g-0 align-items-center">
+            <div class="col-sm-4">
+              <img src="image/vf4.jpg" class="img-thumbnail" style="width: 120px;" alt="VinFast VF4">
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Vinfast4 (VF4)</h5>
+              <p class="card-text">Xe đẹp, ngoại hình ngon</p>
+              <ul>
+                <li>Pin: chưa công bố</li>
+                <li>Quãng đường: chưa công bố</li>
+                <li>Giá: 175 triệu</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+  <!-- Login Modal -->
+<div class="modal fade" id="loginModalToggle" tabindex="-1" aria-labelledby="loginModalToggleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form onsubmit="handleLogin(event)">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalToggleLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="loginAccount" class="form-label">Account</label>
+              <input type="text" class="form-control" id="loginAccount" name="account" placeholder="email@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" name="password" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const username = localStorage.getItem("username");
+      const authenDiv = document.getElementById("authenticated");
+      const nonAuthenDiv = document.getElementById("non-authenticated");
+      const usernameDisplay = document.getElementById("authenticated-username");
+
+      if (username) {
+        usernameDisplay.textContent = username;
+        authenDiv.classList.remove("d-none");
+        nonAuthenDiv.classList.add("d-none");
+      } else {
+        authenDiv.classList.add("d-none");
+        nonAuthenDiv.classList.remove("d-none");
+      }
+    });
+
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById("loginAccount").value;
+      localStorage.setItem("username", email);
+      window.location.reload();
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      window.location.reload();
+    }
+  </script> 
+<!-- css để ngoài html -->
+  
+<style>
+    .sample-image-max-width {
+      max-width: 400px;
+    }
+    .min-card-height {
+      min-height: 400px;
+    }
+  </style>
